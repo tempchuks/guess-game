@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Press Start 2P", system-ui, sans-serif;
+}
+
+body {
+  background-color: rgb(49, 49, 49);
+  font-family: "Press Start 2P", system-ui, sans-serif;
+  margin: 2rem;
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+.testh1 {
+  text-align: center;
+}
+
+.line {
+  margin-top: 150px;
+  background-color: white;
+  height: 0.3em;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-content: center;
+  margin-bottom: 150px;
+}
+
+.secret {
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  color: black;
+  position: absolute;
+  top: -950%;
+  bottom: 950%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+.active {
+  display: flex;
+  gap: 10rem;
+}
+.gameinfo {
+  display: flex;
+  gap: 16rem;
+}
+.input {
+  background-color: white;
+  width: 200px;
+  border: none;
+  height: 50px;
+  outline: none;
+  padding-left: 10px;
+}
+
+.input:focus {
+  background-color: white;
+}
+
+.btn,
+.btn:focus,
+.btn:focus-within {
+  width: 100px;
+  border: none;
+  background-color: white;
+}
+
+.restart {
+  height: 50px;
+}
+.again:hover,
+.btn:hover {
+  cursor: pointer;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
