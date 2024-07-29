@@ -1,4 +1,4 @@
-const secretNumber = Math.round(Math.random() * 20);
+let secretNumber = Math.round(Math.random() * 20);
 let restart = document.querySelector(".restart");
 let secret = document.querySelector(".secret");
 let check = document.querySelector(".check");
@@ -11,8 +11,8 @@ let score = 20;
 let highscore = 0;
 resultScore.innerHTML = `💯 Score: ${score}`;
 resultHighScore.innerHTML = `🥇 High score :${highscore}`;
-check.addEventListener("click", () => {
-  if (input.value == secretNumber) {
+function checks (){
+   if (input.value == secretNumber) {
     document.body.style.backgroundColor = "greenyellow";
     document.body.style.color = "black";
     highscore = score;
@@ -38,9 +38,11 @@ check.addEventListener("click", () => {
   }
 
   console.log("clicked");
-});
+}
+check.addEventListener("click", checks);
 
 const restartGame = () => {
+  secretNumber = Math.round(Math.random() * 20);
   document.body.style.backgroundColor = "rgb(49, 49, 49)";
   document.body.style.color = "white";
   score = 20;
@@ -48,6 +50,7 @@ const restartGame = () => {
   input.value = "";
   result.innerHTML = "Select a number!";
   secret.innerHTML = "?";
+  checks()
 };
 
-restart.addEventListener("click", () => restartGame());
+restart.addEventListener("click", restartGame);
